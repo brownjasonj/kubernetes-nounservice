@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nounservice
+spec:
+  replicas: 5
+  minReadySeconds: 10
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: nounservice
+    spec:
+      containers:
+      - name: nounservice-pod
+        image: jajabro/nounservice:0.0.1
+        ports:
+        - containerPort: 8080
