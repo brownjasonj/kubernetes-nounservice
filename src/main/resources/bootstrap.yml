@@ -8,6 +8,6 @@
 ---
 spring:
   application:
-    name: NounService
+    name: nounservice
   profiles:
-    active: dev
+    active: prod

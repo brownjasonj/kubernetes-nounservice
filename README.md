@@ -4,7 +4,7 @@ gradle bootRepackage
 
 2. Create the docker container
 
-docker build image -t "jajabro/nounservice:0.0.1" .
+docker build -t "jajabro/nounservice:0.0.1" .
 
 3. Push the container to the repo
 
